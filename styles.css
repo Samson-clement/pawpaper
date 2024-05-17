@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
+}
+.container {
+    padding-top: 10px;
+}
+body {
+    background: #fdfbf6;
+    color: #343333
+}
+.heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5%;
+    padding-bottom: 0;
+    position: relative;
+}
+h2 {
+    font-family: "Nanum Pen Script", cursive;
+    font-weight: 1000;
+    font-style: normal;
+    text-align: center;
+    font-size: 50px;
+}
+#title {
+    font-size: 30px;
+    font-weight: bold;
+    position: relative;
+}
+.hamburger-menu {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 30px;
+    width: 30px;
+}
+.hamburger-menu::before,
+.hamburger-menu::after,
+.hamburger-menu div {
+    content: '';
+    height: 3px;
+    width: 100%;
+    background-color: #343333;
+    border-radius: 10px;
+}
+.hamburger-menu div {
+    margin: 2px 0;
+}
+#title {
+    font-weight: 7px;
+    font-size: 30px;
+}
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 5%;
+    row-gap: 20px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+.item {
+    background-color: lightblue;
+    text-align: center;
+    border-radius: 5%;
+    padding-bottom: 0;
+}
+.item img {
+    border-radius: 5%;
+    padding-bottom: 0;
+}
+.daily {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10%;
+    padding-top: 0;
+    padding-bottom: 5%;
+}
+.daily img {
+    height: 300px;
+    width: 300px;
+    border-radius: 5%;
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+}
+.fire-btn {
+    background: #90ee90;
+    color: #000;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 8px 32px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5%;
+}
+.crowndiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#crown {
+    width: 100px;
+    height: 100px;
+}
+#more-btn {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none; /* Button is hidden by default */
+}
+
+
+/* THIS IS TO DO THE DOWNLOAD THING */ 
+.item {
+    position: relative;
+    cursor: pointer;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark tint */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    border-radius: 5%; /* Match the border-radius of the image */
+}
+
+
+.download-btn {
+    padding: 10px 20px;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.download-img {
+    width: 60%; /* Make the SVG fit the overlay */
+    height: 60%; /* Make the SVG fit the overlay */
+    object-fit: cover; /* Ensure it covers the entire overlay */
+    border-radius: 5%; /* Match the border-radius of the overlay */
+}
+
+.item {
+    position: relative; /* To position the overlay correctly */
+}
+
+.img-fluid {
+    width: 100%; /* Ensure the image fits its container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5%; /* Same border-radius for consistency */
+}
+
+.item:hover .overlay {
+    visibility: visible; /* Show overlay on hover */
+}
+
+
+.circle-button {
+    width: 50px; /* Button size as per the image */
+    height: 50px; /* Button size as per the image */
+    font-size: 24px;
+    border-radius: 50%; /* Perfect circle */
+    background-color: #ff0000; /* Bright red for the button top */
+    color: white; /* White icon for contrast */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none; /* Clean look with no border */
+    position: relative; /* Positioning context for pseudo-elements */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.circle-button:before {
+    content: ''; /* Pseudo-element for shadow */
+    position: absolute; /* Absolute position relative to the button */
+    width: 100%; /* Same width as the button */
+    height: 100%; /* Same height as the button */
+    background: #d40000; /* Darker red for shadow */
+    border-radius: 50%; /* Rounded like the button */
+    z-index: -1; /* Behind the button */
+    top: 5px; /* Offset to create the shadow effect */
+    left: 0; /* Aligned to the left */
+}
+
+.circle-button:after {
+    content: ''; /* Second pseudo-element for deeper shadow */
+    position: absolute; /* Absolute position */
+    width: 100%; /* Same width */
+    height: 100%; /* Same height */
+    background: #4c4c4c; /* Dark grey for the deeper shadow */
+    border-radius: 50%; /* Rounded */
+    z-index: -2; /* Behind the first shadow */
+    top: 10px; /* Larger offset to create deeper shadow effect */
+    left: 0; /* Aligned to the left */
+}
+
+.circle-button:active {
+    transform: translateY(1px); /* Push down on click */
+}
+
+.btndwn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+    padding-top: 0px;
+}
+
+#clickcelebrate{
+    height: 45px;
+    padding-right: 5px;
+    position: absolute;
+    left: 26%;
+    z-index: -100;
+}
