@@ -85,6 +85,7 @@ h2 {
     padding-top: 0;
     padding-bottom: 5%;
 }
+
 .daily img {
     height: 300px;
     width: 300px;
@@ -152,8 +153,8 @@ h2 {
 }
 
 .download-img {
-    width: 60%; /* Make the SVG fit the overlay */
-    height: 60%; /* Make the SVG fit the overlay */
+    width: 44%; /* Make the SVG fit the overlay */
+    height: 30%; /* Make the SVG fit the overlay */
     object-fit: cover; /* Ensure it covers the entire overlay */
     border-radius: 5%; /* Match the border-radius of the overlay */
 }
@@ -230,4 +231,131 @@ h2 {
     position: absolute;
     left: 26%;
     z-index: -100;
+}
+
+#sidecat{
+    height: 50px;
+    position: absolute;
+    left: 0;
+}
+
+.hometxt{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+#hometext{
+    height: 125px;
+    align-items: center;
+}
+
+.cotd{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+#catoftheday{
+    height: 60px;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+}
+
+/* HAMBURGER MENU !!!!!!!!! */
+
+.hamburger-menu {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 30px;
+    width: 30px;
+}
+.hamburger-menu::before,
+.hamburger-menu::after,
+.hamburger-menu div {
+    content: '';
+    height: 3px;
+    width: 100%;
+    background-color: #343333;
+    border-radius: 10px;
+}
+.hamburger-menu div {
+    margin: 2px 0;
+
+}
+
+.dropdown-menu {
+    display: none;
+    border: none;
+    position: absolute;
+    top: 9%;
+    left: 0;
+    width: 100%;
+    background-color: #fdfbf6;
+    z-index: 1000;
+    text-align: center;
+
+    max-width: 95%;
+    justify-content: center;
+
+    margin-top: 0px;padding-left: 0px;right: auto;left: 10px;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px;
+    padding-left: 10px;
+    text-decoration: none;
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #343333;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f0f0f0;
+}
+
+.one{
+    border: 1px solid #343333;
+    margin-bottom: 10px;
+}
+.two{
+    border: 1px solid #343333;
+    margin-bottom: 10px;
+}
+.three{
+    border: 1px solid #343333;
+    margin-bottom: 10px;
+}
+
+.abouttext {
+    max-width: 85%;
+    margin: 0 auto; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.abouttext p {
+    margin: 0;
+    text-align: center;
+    font-size: small;
+}
+
+#aboutcat{
+    height: 130px;
+    padding-bottom: 5%;
 }

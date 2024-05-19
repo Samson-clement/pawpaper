@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>PawPaper</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="./images/Untitled.svg"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+
+    <link rel="stylesheet" href="./styles.css"/>
+
+    
+
+</head>
+<body>
+
+    <div class="container2">
+        <div class="heading">
+            <h1 id="title">PAWPAPER</h1>
+            <div class="hamburger-menu" id="hamburgerMenu">
+                <div class=""></div>
+            </div>
+        </div>
+
+        <div class="dropdown-menu" id="dropdownMenu">
+            <div class="one"><a href="#" id="getRandomCat">GET A RANDOM CAT</a></div>
+            <div class="two"><a href="#catgpt">CATGPT</a></div>
+            <div class="three"><a href="./about.html">ABOUT US</a></div>
+        </div>
+
+    </div>
+
+    <div class="abouttext">
+
+        <div class="aboutcat"><img src="./assets/aboutcat.png" alt="about us" id="aboutcat"></div>
+
+        <p style="align-items: center;">Welcome to PawPaper!
+
+           <br/><br/> We are dedicated to providing cat lovers with a vast collection of high-quality cat wallpapers. Our images are perfect for personal use, whether you want to beautify your desktop, phone, or tablet. We got you covered with adorable and cute cat images.
+            
+           <br/><br/>At Pawpaper, we believe in making these images easily accessible to everyone, so no sign-ups are required.
+            
+           <br/><br/>Please note that all images on Pawpaper are copyrighted and intended for personal use only. Commercial use of our images is strictly prohibited. We want you to enjoy our feline friends in the way they were meant to be enjoyed – purely for your own delight and relaxation.
+            
+           <br/><br/>If you have any questions, need assistance, or want to reach out to us for any reason, please feel free to email us <a href="mailto:simonclementwork@gmail.com"> here</a>. We are always here to help and ensure you have the best experience with our website.
+            
+           <br/><br/>Thank you for visiting Pawpaper, and enjoy your stay!
+            </p>
+        
+
+    </div>
+        
+        
+
+    <script>
+
+        document.getElementById('hamburgerMenu').addEventListener('click', function() {
+            const dropdownMenu = document.getElementById('dropdownMenu');
+            if (dropdownMenu.style.display === 'block') {
+                dropdownMenu.style.display = 'none';
+            } else {
+                dropdownMenu.style.display = 'block';
+            }
+        });
+
+      </script>
+    <script src="./index.js"></script>
+</body>
+</html>
