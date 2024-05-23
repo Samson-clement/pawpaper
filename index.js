@@ -55,18 +55,18 @@ document.querySelectorAll('.daily .item').forEach(item => {
     });
 });
 
-document.querySelectorAll('.download-img').forEach(button => {
-    button.addEventListener('click', function(e) {
-        e.stopPropagation(); // Prevent the gallery item click event from firing
-        const imgSrc = this.closest('.item').querySelector('img').src;
-        const link = document.createElement('a');
-        link.href = imgSrc;
-        link.download = imgSrc.split('/').pop(); // Extract the filename and set it as the download attribute
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-    });
-});
+// document.querySelectorAll('.download-img').forEach(button => {
+//     button.addEventListener('click', function(e) {
+//         e.stopPropagation(); // Prevent the gallery item click event from firing
+//         const imgSrc = this.closest('.item').querySelector('img').src;
+//         const link = document.createElement('a');
+//         link.href = imgSrc;
+//         link.download = imgSrc.split('/').pop(); // Extract the filename and set it as the download attribute
+//         document.body.appendChild(link);
+//         link.click();
+//         document.body.removeChild(link);
+//     });
+// });
 
 document.addEventListener('DOMContentLoaded', (event) => {
     // Get the title element by its ID
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 document.getElementById('getRandomCat').addEventListener('click', function(e) {
     e.preventDefault();
-    const randomIndex = Math.floor(Math.random() * 16) + 1;
+    const randomIndex = Math.floor(Math.random() * 131) + 1;
     const imgSrc = `./assets/${randomIndex}.png`;
     const link = document.createElement('a');
     link.href = imgSrc;

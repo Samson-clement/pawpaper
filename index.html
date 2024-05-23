@@ -26,7 +26,11 @@
 
     <link rel="stylesheet" href="./styles.css"/>
 
-    
+    <style>
+        .gallery{
+            padding-bottom: 0px;
+        }
+    </style>
 
 </head>
 <body>
@@ -51,7 +55,7 @@
         <div class="daily">
             <!-- <img src="./assets/7.png" class="img-fluid" alt="Responsive image"> -->
             <div class="item">
-                <img src="./assets/5.png" class="img-fluid" alt="Responsive image">
+                <img src="./assets/5.png" class="img-fluid" alt="Cat of the Day">
                 <div class="overlay">
                     <img src="./assets/download.svg" class="download-img" alt="Overlay Image" style="width: 42%; height: 40%;"/>
                 </div>
@@ -71,8 +75,11 @@
             </div>
             <div class="hometxt"><img id="hometext" src="./assets/hometext.png" alt="hometext"></div>
         </div>
+
+
+        <div id="gallery-container" class="gallery"></div>
         
-        <div class="gallery" style="padding-bottom: 0;">
+        <!-- <div class="gallery" style="padding-bottom: 0;">
             <div class="item">
                 <img src="./assets/1.png" class="img-fluid" alt="Responsive image">
                 <div class="overlay">
@@ -97,180 +104,8 @@
                     <img src="./assets/download.svg" class="download-img" alt="Overlay Image"/>
                 </div>
             </div>
-            <div class="item">
-                <img src="./assets/5.png" class="img-fluid" alt="Responsive image">
-                <div class="overlay">
-                    <img src="./assets/download.svg" class="download-img" alt="Overlay Image"/>
-                </div>
-            </div>
-            <div class="item">
-                <img src="./assets/6.png" class="img-fluid" alt="Responsive image">
-                <div class="overlay">
-                    <img src="./assets/download.svg" class="download-img" alt="Overlay Image"/>
-                </div>
-            </div>
-            <div class="item">
-                <img src="./assets/7.png" class="img-fluid" alt="Responsive image">
-                <div class="overlay">
-                    <img src="./assets/download.svg" class="download-img" alt="Overlay Image"/>
-                </div>
-            </div>
-            <div class="item">
-                <img src="./assets/8.png" class="img-fluid" alt="Responsive image">
-                <div class="overlay">
-                    <img src="./assets/download.svg" class="download-img" alt="Overlay Image"/>
-                </div>
-            </div>
-            <div class="item">
-                <img src="./assets/9.png" class="img-fluid" alt="Responsive image">
-                <div class="overlay">
-                    <img src="./assets/download.svg" class="download-img" alt="Overlay Image"/>
-                </div>
-            </div>
-            <div class="item">
-                <img src="./assets/10.png" class="img-fluid" alt="Responsive image">
-                <div class="overlay">
-                    <img src="./assets/download.svg" class="download-img" alt="Overlay Image"/>
-                </div>
-            </div>
-            <div class="item">
-                <img src="./assets/11.png" class="img-fluid" alt="Responsive image">
-                <div class="overlay">
-                    <img src="./assets/download.svg" class="download-img" alt="Overlay Image"/>
-                </div>
-            </div>
-            <div class="item">
-                <img src="./assets/12.png" class="img-fluid" alt="Responsive image">
-                <div class="overlay">
-                    <img src="./assets/download.svg" class="download-img" alt="Overlay Image"/>
-                </div>
-            </div>
-            <div class="item">
-                <img src="./assets/13.png" class="img-fluid" alt="Responsive image">
-                <div class="overlay">
-                    <img src="./assets/download.svg" class="download-img" alt="Overlay Image"/>
-                </div>
-            </div>
-            <div class="item">
-                <img src="./assets/14.png" class="img-fluid" alt="Responsive image">
-                <div class="overlay">
-                    <img src="./assets/download.svg" class="download-img" alt="Overlay Image"/>
-                </div>
-            </div>
-            <div class="item">
-                <img src="./assets/15.png" class="img-fluid" alt="Responsive image">
-                <div class="overlay">
-                    <img src="./assets/download.svg" class="download-img" alt="Overlay Image"/>
-                </div>
-            </div>
-            <div class="item">
-                <img src="./assets/16.png" class="img-fluid" alt="Responsive image">
-                <div class="overlay">
-                    <img src="./assets/download.svg" class="download-img" alt="Overlay Image"/>
-                </div>
-            </div>
-            <div class="item">
-                <img src="./assets/1.png" class="img-fluid" alt="Responsive image">
-                <div class="overlay">
-                    <img src="./assets/download.svg" class="download-img" alt="Overlay Image"/>
-                </div>
-            </div>
-            <div class="item">
-                <img src="./assets/2.png" class="img-fluid" alt="Responsive image">
-                <div class="overlay">
-                    <img src="./assets/download.svg" class="download-img" alt="Overlay Image"/>
-                </div>
-            </div>
-            <div class="item">
-                <img src="./assets/3.png" class="img-fluid" alt="Responsive image">
-                <div class="overlay">
-                    <img src="./assets/download.svg" class="download-img" alt="Overlay Image"/>
-                </div>
-            </div>
-            <div class="item">
-                <img src="./assets/4.png" class="img-fluid" alt="Responsive image">
-                <div class="overlay">
-                    <img src="./assets/download.svg" class="download-img" alt="Overlay Image"/>
-                </div>
-            </div>
-            <div class="item">
-                <img src="./assets/5.png" class="img-fluid" alt="Responsive image">
-                <div class="overlay">
-                    <img src="./assets/download.svg" class="download-img" alt="Overlay Image"/>
-                </div>
-            </div>
-            <div class="item">
-                <img src="./assets/6.png" class="img-fluid" alt="Responsive image">
-                <div class="overlay">
-                    <img src="./assets/download.svg" class="download-img" alt="Overlay Image"/>
-                </div>
-            </div>
-            <div class="item">
-                <img src="./assets/7.png" class="img-fluid" alt="Responsive image">
-                <div class="overlay">
-                    <img src="./assets/download.svg" class="download-img" alt="Overlay Image"/>
-                </div>
-            </div>
-            <div class="item">
-                <img src="./assets/8.png" class="img-fluid" alt="Responsive image">
-                <div class="overlay">
-                    <img src="./assets/download.svg" class="download-img" alt="Overlay Image"/>
-                </div>
-            </div>
-            <div class="item">
-                <img src="./assets/9.png" class="img-fluid" alt="Responsive image">
-                <div class="overlay">
-                    <img src="./assets/download.svg" class="download-img" alt="Overlay Image"/>
-                </div>
-            </div>
-            <div class="item">
-                <img src="./assets/10.png" class="img-fluid" alt="Responsive image">
-                <div class="overlay">
-                    <img src="./assets/download.svg" class="download-img" alt="Overlay Image"/>
-                </div>
-            </div>
-            <div class="item">
-                <img src="./assets/11.png" class="img-fluid" alt="Responsive image">
-                <div class="overlay">
-                    <img src="./assets/download.svg" class="download-img" alt="Overlay Image"/>
-                </div>
-            </div>
-            <div class="item">
-                <img src="./assets/12.png" class="img-fluid" alt="Responsive image">
-                <div class="overlay">
-                    <img src="./assets/download.svg" class="download-img" alt="Overlay Image"/>
-                </div>
-            </div>
-            <div class="item">
-                <img src="./assets/13.png" class="img-fluid" alt="Responsive image">
-                <div class="overlay">
-                    <img src="./assets/download.svg" class="download-img" alt="Overlay Image"/>
-                </div>
-            </div>
-            <div class="item">
-                <img src="./assets/14.png" class="img-fluid" alt="Responsive image">
-                <div class="overlay">
-                    <img src="./assets/download.svg" class="download-img" alt="Overlay Image"/>
-                </div>
-            </div>
-            <div class="item">
-                <img src="./assets/15.png" class="img-fluid" alt="Responsive image">
-                <div class="overlay">
-                    <img src="./assets/download.svg" class="download-img" alt="Overlay Image"/>
-                </div>
-            </div>
-            <div class="item">
-                <img src="./assets/16.png" class="img-fluid" alt="Responsive image">
-                <div class="overlay">
-                    <img src="./assets/download.svg" class="download-img" alt="Overlay Image"/>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- <div id="more-btn">
-            <button class="fire-btn" onclick="showMore()">More</button>
         </div> -->
+
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
@@ -303,7 +138,7 @@
             if (storedDate === today && storedImageIndex) {
                 newImageIndex = storedImageIndex;
             } else {
-                newImageIndex = Math.floor(Math.random() * 16) + 1; // Generate a random number between 1 and 16
+                newImageIndex = Math.floor(Math.random() * 131) + 1; // Generate a random number between 1 and 16
                 localStorage.setItem('dailyImageDate', today); // Store the current date
                 localStorage.setItem('dailyImageIndex', newImageIndex); // Store the new image index
             }
@@ -322,6 +157,75 @@
             }
         });
 
+        document.addEventListener("DOMContentLoaded", function() {
+            const galleryContainer = document.getElementById('gallery-container');
+
+            // Create an array of image indices
+            let imageIndexes = Array.from({ length: 131 }, (_, i) => i + 1);
+            
+            // Shuffle the array to randomize the order
+            for (let i = imageIndexes.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [imageIndexes[i], imageIndexes[j]] = [imageIndexes[j], imageIndexes[i]];
+            }
+
+            // Generate HTML content for each image
+            let htmlContent = '';
+            imageIndexes.forEach(index => {
+                htmlContent += `
+                    <div class="item">
+                        <img data-src="./assets/${index}.png" class="img-fluid lazy" alt="adorable cat">
+                        <div class="overlay">
+                            <img src="./assets/download.svg" class="download-img" alt="Download Image"/>
+                        </div>
+                    </div>
+                `;
+            });
+
+            // Set the HTML content of the gallery container
+            galleryContainer.innerHTML = htmlContent;
+
+            // Implement advanced lazy loading using IntersectionObserver
+            const lazyImages = document.querySelectorAll("img.lazy");
+
+            if ("IntersectionObserver" in window) {
+                let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            let lazyImage = entry.target;
+                            lazyImage.src = lazyImage.dataset.src;
+                            lazyImage.classList.remove("lazy");
+                            lazyImageObserver.unobserve(lazyImage);
+                        }
+                    });
+                });
+
+                lazyImages.forEach(function(lazyImage) {
+                    lazyImageObserver.observe(lazyImage);
+                });
+            } else {
+                // Fallback for older browsers
+                lazyImages.forEach(function(lazyImage) {
+                    lazyImage.src = lazyImage.dataset.src;
+                    lazyImage.classList.remove("lazy");
+                });
+            }
+
+            // Handle image download
+            document.querySelectorAll('.download-img').forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.stopPropagation(); // Prevent the gallery item click event from firing
+                    const imgElement = this.closest('.item').querySelector('img');
+                    const imgSrc = imgElement.src || imgElement.dataset.src; // Use src if available, otherwise use data-src
+                    const link = document.createElement('a');
+                    link.href = imgSrc;
+                    link.download = imgSrc.split('/').pop(); // Extract the filename and set it as the download attribute
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                });
+            });
+        });
       </script>
     <script src="./index.js"></script>
 </body>
