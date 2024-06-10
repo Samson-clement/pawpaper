@@ -359,3 +359,158 @@ h2 {
     height: 130px;
     padding-bottom: 5%;
 }
+/*consent cookie*/
+
+.cookie-consent {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fdfbf5;
+    border: 2px solid #fdfbf5;
+    border-radius: 24px;
+    padding: 10px;
+    width: 420px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.cookie-consent img {
+    height: 150px;
+    width: 150px;
+    margin-bottom: 10px;
+}
+.cookie-consent p {
+    padding-top: 1rem;
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 13px;
+    margin: 10px 0;
+}
+.cookie-consent a {
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 13px;
+    color: rgb(0, 0, 0);
+    text-decoration: underline;
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+.cookie-consent .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px; 
+    height: 20px; 
+    background-color: transparent;
+    border: 2px solid #000; 
+    border-radius: 50%; 
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1; 
+}
+.cookie-consent button {
+    font-family: "Nanum Pen Script", cursive;
+    font-size: 20px;
+    padding: 5px 5px;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.cookie-consent .accept {
+    margin-left: 4rem;
+    background-color: #fdfbf5;
+    color: rgb(0, 0, 0);
+}
+.cookie-consent .accept:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.cookie-consent .reject {
+    background-color: #fdfbf5;
+    color: rgb(0, 0, 0);
+}
+.cookie-consent .reject:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* Media Queries */
+
+/* For tablets and larger devices */
+@media (max-width: 768px) {
+    .cookie-consent {
+        width: 82%;
+        padding: 15px;
+    }
+    .cookie-consent p, .cookie-consent a {
+        font-size: 16px;
+    }
+    .cookie-consent img {
+        height: 140px;
+        width: 140px;
+    }
+    .cookie-consent button {
+        font-size: 28px;
+        margin-left: 20px;
+    }
+    .cookie-consent .close {
+        width: 25px;
+        height: 25px;
+        font-size: 25px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+    .button-container {
+        gap: 5px;
+    }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+    .cookie-consent {
+        width: 90%;
+        padding: 10px;
+    }
+    .cookie-consent p, .cookie-consent a {
+        font-size: 12px;
+    }
+    .cookie-consent img {
+        height: 110px;
+        width: 110px;
+    }
+    .cookie-consent button {
+        font-size: 17px;
+        margin-left: 30px;
+    }
+    .button-container {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+    }
+    .cookie-consent .accept, .cookie-consent .reject {
+        margin-left: 2px;
+    }
+    .cookie-consent .close {
+        width: 20px;
+        height: 20px;
+        font-size: 20px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+}
