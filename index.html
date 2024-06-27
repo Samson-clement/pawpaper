@@ -227,6 +227,18 @@
             });
         });
       </script>
+      <!--cookies consent pop up-->
+      <div class="cookie-consent" id="cookieConsent">
+        <button class="close" onclick="closeConsent()">&times;</button>
+        <p>By clicking "Accept All Cookies", you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts. <a href="#">Cookie policy</a></p>
+        <img src="assets/cat.png" alt="Cookie Cat">
+        <div class="button-container">
+            <button class="reject" onclick="rejectCookies()">Reject all cookies</button>
+            <button class="accept" onclick="acceptCookies()">Accept all cookies</button>
+        </div>
+    </div>
+    
+    <div id="gallery-container" class="gallery"></div>
     <script src="./index.js"></script>
 </body>
 </html>

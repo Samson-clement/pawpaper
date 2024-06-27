@@ -91,3 +91,64 @@ document.getElementById('getRandomCat').addEventListener('click', function(e) {
     link.click();
     document.body.removeChild(link);
 });
+
+// function to close cookie window
+function closeConsent() {
+    document.getElementById('cookieConsent').style.display = 'none';
+}
+document.querySelector('.cookie-consent .close').addEventListener('click', closeConsent);
+
+// cookies
+function acceptCookies() {
+    document.getElementById('cookieConsent').style.display = 'none';
+    console.log("Cookies accepted");
+}
+
+function rejectCookies() {
+    document.getElementById('cookieConsent').style.display = 'none';
+    // Your logic to handle cookie rejection
+    console.log("Cookies rejected");
+}
+// Function to set a cookie
+function setCookie(name, value, days) {
+    const date = new Date();
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+    const expires = "expires=" + date.toUTCString();
+    document.cookie = name + "=" + value + ";" + expires + ";path=/";
+}
+// Function to get a cookie by name
+function getCookie(name) {
+    const nameEQ = name + "=";
+    const ca = document.cookie.split(';');
+    for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+}
+// Function to handle accepting cookies
+function acceptCookies() {
+    setCookie('cookieConsent', 'accepted', 7); // Set cookie to expire in 7 days
+    document.getElementById('cookieConsent').style.display = 'none';
+    console.log("Cookies accepted");
+}
+// Function to handle rejecting cookies
+function rejectCookies() {
+    setCookie('cookieConsent', 'rejected', 1); // Set cookie to expire in 1 days
+    document.getElementById('cookieConsent').style.display = 'none';
+    console.log("Cookies rejected");
+}
+
+// Function to check if consent is given
+function checkConsent() {
+    const consent = getCookie('cookieConsent');
+    if (consent === 'accepted' || consent === 'rejected') {
+        document.getElementById('cookieConsent').style.display = 'none';
+    } else {
+        document.getElementById('cookieConsent').style.display = 'flex';
+    }
+}
+// Check consent on page load
+window.onload = checkConsent;
+
