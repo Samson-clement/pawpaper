@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>PawPaper</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Raleway:ital,wght@0,100..900;1,100..900&family=Nanum+Pen+Script&family=Open+Sans:300,400,700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./images/Untitled.svg"/>
+    <link rel="stylesheet" href="./styles.css"/>
+
+    <style>
+        .download-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #4a4a4a;
+            border: none;
+            border-radius: 8px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            position: relative;
+            transform: translateY(0);
+        }
+
+        .download-btn:hover {
+            background-color: #3a3a3a;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            transform: translateY(2px);
+        }
+
+        .download-btn:active {
+            background-color: #333;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+            transform: translateY(4px);
+        }
+
+        .item-download {
+            position: relative;
+        }
+
+        .heart-icon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 35px;
+            color: red;
+            cursor: pointer;
+            transition: transform 0.5s, color 0.5s;
+        }
+
+        .heart-icon.bxs-heart {
+            color: #ff0000;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container2">
+        <div class="heading">
+            <h1 id="title">PAWPAPER</h1>
+            <div class="hamburger-menu" id="hamburgerMenu">
+                <div class=""></div>
+            </div>
+        </div>
+        <div class="dropdown-menu" id="dropdownMenu">
+            <div class="one"><a href="#" id="getRandomCat">GET A RANDOM CAT</a></div>
+            <div class="two"><a href="#catgpt">FAVOURITES</a></div>
+            <div class="three"><a href="./about.html">ABOUT US</a></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="daily-download">
+            <div class="item-download">
+                <img src="" id="download-image" class="img-download" alt="Cat">
+                <i class='bx bx-heart heart-icon' id="heart-icon"></i>
+            </div>
+        </div>
+        <div class="containerr" style="display:flex; align-items: center; justify-content: center; ">
+            <a href="" id="download-link" download="adorablecat.png" class="download-btn" style="font-size: 23px;">DOWNLOAD</a>
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1377827392309792" crossorigin="anonymous"></script>
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1377827392309792" data-ad-slot="8778455096" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', (event) => {
+                const params = new URLSearchParams(window.location.search);
+                const imageName = params.get('image');
+
+                if (imageName) {
+                    const imageElement = document.getElementById('download-image');
+                    const downloadLink = document.getElementById('download-link');
+
+                    imageElement.src = `./assets/${imageName}`;
+                    downloadLink.href = `./assets/${imageName}`;
+                    downloadLink.download = imageName;
+                }
+            });
+        </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-pzjw8f+ua7Kw1TIqZw1eZs3P5LhJf5HSkRCg7fwl+P10+JlW8a4lq/66KD4Ll6r9" crossorigin="anonymous"></script>
+        <script>
+            document.getElementById('hamburgerMenu').addEventListener('click', function() {
+                const dropdownMenu = document.getElementById('dropdownMenu');
+                if (dropdownMenu.style.display === 'block') {
+                    dropdownMenu.style.display = 'none';
+                } else {
+                    dropdownMenu.style.display = 'block';
+                }
+            });
+
+            const heartIcon = document.getElementById('heart-icon');
+
+            heartIcon.addEventListener('click', () => {
+                heartIcon.classList.toggle('bx-heart');
+                heartIcon.classList.toggle('bxs-heart');
+            });
+        </script>
+        <script src="./index.js"></script>
+    </div>
+</body>
+</html>

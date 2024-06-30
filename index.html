@@ -4,37 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>PawPaper</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Raleway:ital,wght@0,100..900;1,100..900&family=Nanum+Pen+Script&family=Open+Sans:300,400,700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
-    
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="shortcut icon" href="./images/Untitled.svg"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-
-
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./images/Untitled.svg"/>
     <link rel="stylesheet" href="./styles.css"/>
 
     <style>
-        .gallery{
-            padding-bottom: 0px;
+        .overlay-tint {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 9998;
+            display: none;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Raleway", sans-serif;
         }
     </style>
-
 </head>
 <body>
-
     <div class="container2">
         <div class="heading">
             <h1 id="title">PAWPAPER</h1>
@@ -42,193 +41,37 @@
                 <div class=""></div>
             </div>
         </div>
-
         <div class="dropdown-menu" id="dropdownMenu">
             <div class="one"><a href="#" id="getRandomCat">GET A RANDOM CAT</a></div>
-            <div class="two"><a href="#catgpt">CATGPT</a></div>
+            <div class="two"><a href="#catgpt">FAVOURITES</a></div>
             <div class="three"><a href="./about.html">ABOUT US</a></div>
         </div>
-
         <div class="crowndiv"><img id="crown" src="./assets/v.gif" alt="crown"></div>
     </div>
     <div class="container">
         <div class="daily">
-            <!-- <img src="./assets/7.png" class="img-fluid" alt="Responsive image"> -->
             <div class="item">
-                <img src="./assets/5.png" class="img-fluid" alt="Cat of the Day">
+                <img id="dailyImage" class="img-fluid" alt="Cat of the Day">
                 <div class="overlay">
-                    <img src="./assets/download.svg" class="download-img" alt="Overlay Image" style="width: 42%; height: 40%;"/>
+                    <img onclick="downloadDailyImage()" src="./assets/download.svg" class="download-img" alt="Overlay Image" style="width: 42%; height: 40%;"/>
                 </div>
             </div>
         </div>
-
         <div class="containerr">
-            <!-- <h2>CAT OF THE DAY</h2> -->
             <div class="cotd"><img src="./assets/cotd.png" id="catoftheday" alt="cotd"></div>
-
             <div class="btndwn" style="padding-left: 10px;">
                 <img src="./assets/sidecat.svg" alt="sidecat" id="sidecat">
                 <img id="clickcelebrate" alt="click to celebrate" src="./assets/celebrate.png"/>
                 <button id="celebrateButton" type="button" class="circle-button">
-                    <i class="glyphicon glyphicon-heart"></i> <!-- Icon can be changed if needed -->
+                    <i class="glyphicon glyphicon-heart"></i>
                 </button>
             </div>
             <div class="hometxt"><img id="hometext" src="./assets/hometext.png" alt="hometext"></div>
         </div>
-
-
         <div id="gallery-container" class="gallery"></div>
-        
-        <!-- <div class="gallery" style="padding-bottom: 0;">
-            <div class="item">
-                <img src="./assets/1.png" class="img-fluid" alt="Responsive image">
-                <div class="overlay">
-                    <img src="./assets/download.svg" class="download-img" alt="Overlay Image"/>
-                </div>
-            </div>
-            <div class="item">
-                <img src="./assets/2.png" class="img-fluid" alt="Responsive image">
-                <div class="overlay">
-                    <img src="./assets/download.svg" class="download-img" alt="Overlay Image"/>
-                </div>
-            </div>
-            <div class="item">
-                <img src="./assets/3.png" class="img-fluid" alt="Responsive image">
-                <div class="overlay">
-                    <img src="./assets/download.svg" class="download-img" alt="Overlay Image"/>
-                </div>
-            </div>
-            <div class="item">
-                <img src="./assets/4.png" class="img-fluid" alt="Responsive image">
-                <div class="overlay">
-                    <img src="./assets/download.svg" class="download-img" alt="Overlay Image"/>
-                </div>
-            </div>
-        </div> -->
-
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
-    <script>
-        function runConfetti() {
-            confetti({
-                particleCount: 400,
-                spread: 90,
-                origin: { x: 1, y: 0.9 },
-            });
-
-            confetti({
-                particleCount: 400,
-                spread: 90,
-                origin: { x: 0, y: 0.9 },
-            });
-        }
-
-        window.addEventListener('load', () => {
-            runConfetti();
-
-            // Random daily image logic
-            const dailyImage = document.getElementById('dailyImage');
-            const today = new Date().toISOString().slice(0, 10); // Get the current date in YYYY-MM-DD format
-            const storedDate = localStorage.getItem('dailyImageDate');
-            const storedImageIndex = localStorage.getItem('dailyImageIndex');
-
-            let newImageIndex;
-
-            if (storedDate === today && storedImageIndex) {
-                newImageIndex = storedImageIndex;
-            } else {
-                newImageIndex = Math.floor(Math.random() * 131) + 1; // Generate a random number between 1 and 16
-                localStorage.setItem('dailyImageDate', today); // Store the current date
-                localStorage.setItem('dailyImageIndex', newImageIndex); // Store the new image index
-            }
-
-            dailyImage.src = `./assets/${newImageIndex}.png`;
-        });
-
-        document.getElementById('celebrateButton').addEventListener('click', runConfetti);
-
-        document.getElementById('hamburgerMenu').addEventListener('click', function() {
-            const dropdownMenu = document.getElementById('dropdownMenu');
-            if (dropdownMenu.style.display === 'block') {
-                dropdownMenu.style.display = 'none';
-            } else {
-                dropdownMenu.style.display = 'block';
-            }
-        });
-
-        document.addEventListener("DOMContentLoaded", function() {
-            const galleryContainer = document.getElementById('gallery-container');
-
-            // Create an array of image indices
-            let imageIndexes = Array.from({ length: 131 }, (_, i) => i + 1);
-            
-            // Shuffle the array to randomize the order
-            for (let i = imageIndexes.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [imageIndexes[i], imageIndexes[j]] = [imageIndexes[j], imageIndexes[i]];
-            }
-
-            // Generate HTML content for each image
-            let htmlContent = '';
-            imageIndexes.forEach(index => {
-                htmlContent += `
-                    <div class="item">
-                        <img data-src="./assets/${index}.png" class="img-fluid lazy" alt="adorable cat">
-                        <div class="overlay">
-                            <img src="./assets/download.svg" class="download-img" alt="Download Image"/>
-                        </div>
-                    </div>
-                `;
-            });
-
-            // Set the HTML content of the gallery container
-            galleryContainer.innerHTML = htmlContent;
-
-            // Implement advanced lazy loading using IntersectionObserver
-            const lazyImages = document.querySelectorAll("img.lazy");
-
-            if ("IntersectionObserver" in window) {
-                let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
-                    entries.forEach(function(entry) {
-                        if (entry.isIntersecting) {
-                            let lazyImage = entry.target;
-                            lazyImage.src = lazyImage.dataset.src;
-                            lazyImage.classList.remove("lazy");
-                            lazyImageObserver.unobserve(lazyImage);
-                        }
-                    });
-                });
-
-                lazyImages.forEach(function(lazyImage) {
-                    lazyImageObserver.observe(lazyImage);
-                });
-            } else {
-                // Fallback for older browsers
-                lazyImages.forEach(function(lazyImage) {
-                    lazyImage.src = lazyImage.dataset.src;
-                    lazyImage.classList.remove("lazy");
-                });
-            }
-
-            // Handle image download
-            document.querySelectorAll('.download-img').forEach(button => {
-                button.addEventListener('click', function(e) {
-                    e.stopPropagation(); // Prevent the gallery item click event from firing
-                    const imgElement = this.closest('.item').querySelector('img');
-                    const imgSrc = imgElement.src || imgElement.dataset.src; // Use src if available, otherwise use data-src
-                    const link = document.createElement('a');
-                    link.href = imgSrc;
-                    link.download = imgSrc.split('/').pop(); // Extract the filename and set it as the download attribute
-                    document.body.appendChild(link);
-                    link.click();
-                    document.body.removeChild(link);
-                });
-            });
-        });
-      </script>
-      <!--cookies consent pop up-->
-      <div class="cookie-consent" id="cookieConsent">
+    <div class="overlay-tint" id="overlayTint"></div>
+    <div class="cookie-consent" id="cookieConsent">
         <button class="close" onclick="closeConsent()">&times;</button>
         <p>By clicking "Accept All Cookies", you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts. <a href="#">Cookie policy</a></p>
         <img src="assets/cat.png" alt="Cookie Cat">
@@ -237,8 +80,10 @@
             <button class="accept" onclick="acceptCookies()">Accept all cookies</button>
         </div>
     </div>
-    
-    <div id="gallery-container" class="gallery"></div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybWX9s1u5pztmLMSIMf8j7qIDV0yP8tGiH/i2Qp+iuBP8VQfw" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-pzjw8f+ua7Kw1TIqZw1eZs3P5LhJf5HSkRCg7fwl+P10+JlW8a4lq/66KD4Ll6r9" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
     <script src="./index.js"></script>
 </body>
 </html>
